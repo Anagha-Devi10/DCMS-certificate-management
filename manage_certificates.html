@@ -1,0 +1,52 @@
+<!-- manage_certificates.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Certificates</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Manage Certificates</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="renewal_requests.html">Renewal Requests</a>
+      <a href="reports.html">Reports</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </header>
+  <section>
+    <h2>All Certificates</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Serial Number</th>
+          <th>Subject</th>
+          <th>Issuer</th>
+          <th>Expiry Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>123456</td>
+          <td>www.example.com</td>
+          <td>Let's Encrypt</td>
+          <td>2024-10-01</td>
+          <td>Active</td>
+          <td>
+            <button>Edit</button>
+            <button>Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <footer>
+    <p>© 2024 Digital Certificate Management System</p>
+  </footer>
+</body>
+</html>
