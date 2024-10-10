@@ -1,31 +1,92 @@
 <!-- dashboard.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Dashboard</h1>
-    <nav>
-      <a href="manage_certificates.html">Manage Certificates</a>
-      <a href="renewal_requests.html">Renewal Requests</a>
-      <a href="reports.html">Reports</a>
-      <a href="settings.html">Settings</a>
-      <a href="logout.html">Logout</a>
-    </nav>
-  </header>
-  <section>
-    <h2>Certificate Overview</h2>
-    <p>Total Certificates: 50</p>
-    <p>Expiring Soon: 5</p>
-    <p>Pending Renewals: 3</p>
-  </section>
-  <footer>
-    <p>© 2024 Digital Certificate Management System</p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .heading {
+        display: flex;
+        justify-content: center;
+        font-size: 4rem;
+      }
+
+      .box {
+        display: flex;
+        width: 300px;
+        background-color: #6a9ab0;
+        border-radius: 10px;
+        box-shadow: 4px 6px 4px 6px rgba(0, 0, 0, 0.2);
+        margin: 50px;
+        flex-direction: column;
+        /* align-items: end; */
+        /* justify-content: center; */
+      }
+      .box:hover {
+        background-color: #3a6d8c;
+      }
+      .box .number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 4rem;
+      }
+      .cards {
+        display: flex;
+        justify-content: center;
+      }
+      .title {
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      nav a {
+        background-color: #001f3f;
+      }
+      nav a:hover {
+        background-color: white;
+      }
+
+      /* .navbar{
+        position: fixed;
+      } */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Dashboard</h1>
+      <nav class="navbar">
+        <a href="manage_certificates.html">Manage Certificates</a>
+        <a href="renewal_requests.html">Renewal Requests</a>
+        <a href="reports.html">Reports</a>
+        <a href="settings.html">Settings</a>
+        <a href="logout.html">Logout</a>
+      </nav>
+    </header>
+    <section>
+      <h2 class="heading">Certificate Overview</h2>
+      <div class="cards">
+        <div class="box">
+          <div class="number"><h1>50</h1></div>
+          <p class="title">Total Certificates</p>
+        </div>
+        <div class="box">
+          <div class="number"><h1>50</h1></div>
+          <p class="title">Expiring Soon</p>
+        </div>
+        <div class="box">
+          <div class="number"><h1>50</h1></div>
+          <p class="title">Pending Renewals</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>© 2024 Digital Certificate Management System</p>
+    </footer>
+  </body>
 </html>

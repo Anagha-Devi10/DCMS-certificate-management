@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: #007bff;
+  background-color: #001F3F;
   color: white;
   padding: 10px 0;
   text-align: center;
@@ -19,12 +19,15 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  background-color: white;
+  padding: 20px;
+  color:#001F3F ;
 }
 
 h1,
 h2 {
-  color: #333;
+  color: #fffff;
 }
 
 section {
@@ -56,14 +59,14 @@ th {
 button {
   padding: 5px 10px;
   margin: 5px;
-  background-color: #007bff;
+  background-color: #6A9AB0;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #3A6D8C;
 }
 
 footer {
