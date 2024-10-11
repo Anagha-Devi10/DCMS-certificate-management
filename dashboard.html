@@ -16,7 +16,7 @@
       .box {
         display: flex;
         width: 300px;
-        background-color: #6a9ab0;
+        background-color: var(--color3);
         border-radius: 10px;
         box-shadow: 4px 6px 4px 6px rgba(0, 0, 0, 0.2);
         margin: 50px;
@@ -25,7 +25,7 @@
         /* justify-content: center; */
       }
       .box:hover {
-        background-color: #3a6d8c;
+        background-color: var(--color2);
       }
       .box .number {
         display: flex;
@@ -44,22 +44,11 @@
         font-size: 2rem;
         font-weight: 600;
       }
-
-      nav a {
-        background-color: #001f3f;
-      }
-      nav a:hover {
-        background-color: white;
-      }
-
-      /* .navbar{
-        position: fixed;
-      } */
     </style>
   </head>
   <body>
     <header>
-      <h1>Dashboard</h1>
+      <h1 style="color:white ;">Dashboard</h1>
       <nav class="navbar">
         <a href="manage_certificates.html">Manage Certificates</a>
         <a href="renewal_requests.html">Renewal Requests</a>
@@ -72,15 +61,15 @@
       <h2 class="heading">Certificate Overview</h2>
       <div class="cards">
         <div class="box">
-          <div class="number"><h1>50</h1></div>
+          <div class="number"><h1 id="total_certificates">50</h1></div>
           <p class="title">Total Certificates</p>
         </div>
         <div class="box">
-          <div class="number"><h1>50</h1></div>
+          <div class="number"><h1 id="expiring_soon">50</h1></div>
           <p class="title">Expiring Soon</p>
         </div>
         <div class="box">
-          <div class="number"><h1>50</h1></div>
+          <div class="number"><h1 id="pending_renewals">50</h1></div>
           <p class="title">Pending Renewals</p>
         </div>
       </div>
@@ -88,5 +77,18 @@
     <footer>
       <p>© 2024 Digital Certificate Management System</p>
     </footer>
+    <script>
+      const total_certificates = 0;
+      const total_certificates_h1 = document.querySelector(
+        "#total_certificates"
+      );
+      total_certificates_h1.textContent = `${total_certificates}`;
+      const expiring_soon = 0;
+      const expiring_soon_h1 = document.querySelector("#expiring_soon");
+      expiring_soon_h1.textContent = `${expiring_soon}`;
+      const pending_renewals = 0;
+      const pending_renewals_h1 = document.querySelector("#pending_renewals");
+      pending_renewals_h1.textContent = `${pending_renewals}`;
+    </script>
   </body>
 </html>

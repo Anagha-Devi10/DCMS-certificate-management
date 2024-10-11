@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Account Settings</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .success {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Settings</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .success {
       color: green;
     }
     .error {
@@ -15,75 +15,161 @@
     .form-section {
       margin-bottom: 20px;
     }
-  </style>
-</head>
-<body>
-  <h2>Account Settings</h2>
+      /* General Styles */
+      body {
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      h2,h3{
+        color: #333;
+      }
+      a{
+        color:var(--color3);
+        text-decoration: none;
+      }
+      a:hover{
+        color: var(--color2);
+      }
+      .form-section{
+        background-color: white;
+        box-shadow: 4px 6px 4px 6px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        max-width: 500px;
+        width: 100%;
+      }
+      h3{
+        margin-bottom: 15px;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+      }
 
-  <!-- Flash messages for success or error feedback -->
-  {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-      <ul>
-        {% for category, message in messages %}
-          <li class="{{ category }}">{{ message }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  {% endwith %}
+      label{
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input{
+        padding: 10px;
+        margin-bottom: 15px;  
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    
+      }
 
-  <!-- Profile Update Section -->
-  <section class="form-section">
-    <h3>Profile Information</h3>
-    <form action="/update_profile" method="post">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" value="{{ current_username }}" required>
-      <br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" value="{{ current_email }}" required>
-      <br>
-      <button type="submit">Update Profile</button>
-    </form>
-  </section>
+      button{
+        border-radius: 5px;
+      }
+      ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h2>Account Settings</h2>
+    <!-- Profile Update Section -->
+    <section class="form-section">
+      <h3>Profile Information</h3>
+      <form action="/update_profile" method="post">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          value="{{ current_username }}"
+          required
+        />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value="{{ current_email }}"
+          required
+        />
+       
+        <button type="submit">Update Profile</button>
+      </form>
+    </section>
 
-  <!-- Change Password Section -->
-  <section class="form-section">
-    <h3>Change Password</h3>
-    <form action="/change_password" method="post">
-      <label for="current_password">Current Password:</label>
-      <input type="password" id="current_password" name="current_password" required>
-      <br>
-      <label for="new_password">New Password:</label>
-      <input type="password" id="new_password" name="new_password" required>
-      <br>
-      <label for="confirm_new_password">Confirm New Password:</label>
-      <input type="password" id="confirm_new_password" name="confirm_new_password" required>
-      <br>
-      <button type="submit">Change Password</button>
-    </form>
-  </section>
+    <!-- Change Password Section -->
+    <section class="form-section">
+      <h3>Change Password</h3>
+      <form action="/change_password" method="post">
+        <label for="current_password">Current Password:</label>
+        <input
+          type="password"
+          id="current_password"
+          name="current_password"
+          required
+        />
+        <label for="new_password">New Password:</label>
+        <input type="password" id="new_password" name="new_password" required />
+        <label for="confirm_new_password">Confirm New Password:</label>
+        <input
+          type="password"
+          id="confirm_new_password"
+          name="confirm_new_password"
+          required
+        />
+        <button type="submit">Change Password</button>
+      </form>
+    </section>
 
-  <!-- Notification Preferences Section -->
-  <section class="form-section">
-    <h3>Notifications</h3>
-    <form action="/update_notifications" method="post">
-      <label for="email_notifications">Email Notifications:</label>
-      <input type="checkbox" id="email_notifications" name="email_notifications" {% if email_notifications %}checked{% endif %}>
-      <br>
-      <label for="sms_notifications">SMS Notifications:</label>
-      <input type="checkbox" id="sms_notifications" name="sms_notifications" {% if sms_notifications %}checked{% endif %}>
-      <br>
-      <button type="submit">Update Notifications</button>
-    </form>
-  </section>
+    <!-- Notification Preferences Section -->
+    <section class="form-section">
+      <h3>Notifications</h3>
+      <form action="/update_notifications" method="post">
+        <label for="email_notifications">Email Notifications:</label>
+        <input
+          type="checkbox"
+          id="email_notifications"
+          name="email_notifications"
+          {%
+          if
+          email_notifications
+          %}checked{%
+          endif
+          %}
+        />
+        <label for="sms_notifications">SMS Notifications:</label>
+        <input
+          type="checkbox"
+          id="sms_notifications"
+          name="sms_notifications"
+          {%
+          if
+          sms_notifications
+          %}checked{%
+          endif
+          %}
+        />
+        <button type="submit">Update Notifications</button>
+      </form>
+    </section>
 
-  <!-- Account Actions Section -->
-  <section class="form-section">
-    <h3>Account Actions</h3>
-    <form action="/delete_account" method="post" onsubmit="return confirm('Are you sure you want to delete your account? This action cannot be undone.');">
-      <button type="submit" style="color: red;">Delete Account</button>
-    </form>
-  </section>
+    <!-- Account Actions Section -->
+    <section class="form-section">
+      <h3>Account Actions</h3>
+      <form
+        action="/delete_account"
+        method="post"
+        onsubmit="return confirm('Are you sure you want to delete your account? This action cannot be undone.');"
+      >
+        <button type="submit" style="background-color: rgb(169, 6, 6)">Delete Account</button>
+      </form>
+    </section>
 
-  <a href="dashboard.html">Back to Dashboard</a>
-</body>
+    <a href="dashboard.html">Back to Dashboard</a>
+  </body>
 </html>

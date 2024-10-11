@@ -1,4 +1,12 @@
 /* styles.css */
+
+:root {
+  --color1: #001f3f;
+  --color2: #3a6d8c;
+  --color3: #6a9ab0;
+  --color4: #ead8b1;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,28 +14,29 @@ body {
 }
 
 header {
-  background-color: #001F3F;
+  background-color: var(--color1);
   color: white;
   padding: 10px 0;
   text-align: center;
 }
 
+
 nav a {
   margin: 0 15px;
   color: white;
   text-decoration: none;
+  padding: 20px;
 }
 
 nav a:hover {
   text-decoration: none;
   background-color: white;
-  padding: 20px;
-  color:#001F3F ;
+  color: var(--color1);
 }
 
 h1,
 h2 {
-  color: #fffff;
+  color: white;
 }
 
 section {
@@ -59,14 +68,14 @@ th {
 button {
   padding: 5px 10px;
   margin: 5px;
-  background-color: #6A9AB0;
+  background-color: var(--color3);
   color: white;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #3A6D8C;
+  background-color: var(--color2);
 }
 
 footer {
@@ -75,6 +84,6 @@ footer {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: #f8f9fa;
-  color: #333;
+  background-color: #4fe3fa;
+  color: #000000;
 }
