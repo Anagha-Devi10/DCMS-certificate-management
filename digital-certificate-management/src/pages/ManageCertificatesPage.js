@@ -1,12 +1,19 @@
 // src/pages/ManageCertificates.js
-import React from 'react';
-import './manage_certificates.css';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React from "react";
+// import './manage_certificates.css';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import styles from "./manage_certificates.module.css";
 
 function ManageCertificatesPage() {
   const certificates = [
-    { id: 123456, subject: 'www.example.com', issuer: "Let's Encrypt", expiry: '2024-10-01', status: 'Active' }
+    {
+      id: 123456,
+      subject: "www.example.com",
+      issuer: "Let's Encrypt",
+      expiry: "2024-10-01",
+      status: "Active",
+    },
     // Add more certificates as needed
   ];
 
@@ -36,7 +43,8 @@ function ManageCertificatesPage() {
                 <td>{certificate.status}</td>
                 <td>
                   <button>Edit</button>
-                  <button className="dlt">Delete</button>
+
+                  <button className={styles["dlt"]}>Delete</button>
                 </td>
               </tr>
             ))}

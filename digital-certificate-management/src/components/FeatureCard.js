@@ -1,10 +1,10 @@
 // src/components/FeatureCard.js
 import React from 'react';
-import './Components.css';
+import styles from './feature.module.css'
 
 function FeatureCard({ title, description }) {
   return (
-    <div className="feature">
+    <div className={styles["feature"]}>
       <h3>{title}</h3>
       <p>{description}</p>
     </div>
