@@ -1,0 +1,11 @@
+.reject{
+    margin-left: 8px;
+    background-color: #b80606;
+
+}
+
+
+  
+.reject:hover {
+    background-color: rgb(240, 15, 15);
+  }

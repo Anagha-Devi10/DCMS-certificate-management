@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import styles from './renewal.module.css'
 
 function RenewalRequestsPage() {
   const renewals = [
@@ -31,7 +32,7 @@ function RenewalRequestsPage() {
                 <td>{renewal.status}</td>
                 <td>
                   <button>Approve</button>
-                  <button>Reject</button>
+                  <button className={styles["reject"]}>Reject</button>
                 </td>
               </tr>
             ))}

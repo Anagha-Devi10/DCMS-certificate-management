@@ -1,14 +1,15 @@
 // src/components/Header.js
 import React from 'react';
-import './Components.css'; // Common component-specific styles
+// import './Components.css'; // Common component-specific styles
+import styles from './header.module.css'
 
 function Header() {
   return (
-    <header>
-      <div className="container">
+    <header className= {styles["header"]}>
+      <div className={styles["container"]}>
         <h1>Welcome to the Digital Certificate Management System</h1>
-        <nav>
-          <a href="/">Dashboard</a>
+        <nav className={styles["nav"]}>
+          <a href="/dashboard">Dashboard</a>
           <a href="/manage-certificates">Manage Certificates</a>
           <a href="/renewal-requests">Renewal Requests</a>
           <a href="/reports">Reports</a>
