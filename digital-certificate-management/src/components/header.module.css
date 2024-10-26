@@ -3,15 +3,17 @@
     color: white;
     padding: 20px 0;
     text-align: center !important;
+    /* height: 210px; */
   }
   
 .header h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
   }
 
 .nav {
-    margin-top: 30px;
+    margin-top: 1px;
+    font-size: 1.2rem;
   }
   
 .nav a {
@@ -26,7 +28,33 @@
     color: var(--color1);
   }
 
+
 .container h1{
     color: var(--color5);
     font-size: 3rem;
 }
+
+.branding {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: 100px;
+  scale: 2.0;
+  margin-right: 4rem; 
+  margin-left: 5rem;
+}
+
+.welcome-text {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-left: 60px;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+}
+
