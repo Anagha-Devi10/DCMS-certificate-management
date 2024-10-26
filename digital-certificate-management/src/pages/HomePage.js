@@ -4,12 +4,14 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FeatureCard from "../components/FeatureCard";
 import featuresStyles from "../components/feature.module.css";
+import styles from './home.module.css';
+
 function HomePage() {
   return (
-    <div>
+    <div style={{"position":"relative"}}>
       <Header />
-      <section className="hero">
-        <div className="container">
+      <section className={styles ["hero"]}>
+        <div className={styles["container"]}>
           <h2>
             Secure, Efficient, and Easy Management of Digital Certificates
           </h2>
@@ -20,9 +22,9 @@ function HomePage() {
         </div>
       </section>
       <section className={featuresStyles["features"]}>
-        <div className="container">
+        <div className={styles["container"]}>
           <h2>Key Features</h2>
-          <div className="feature-grid">
+          <div className={featuresStyles["feature-grid"]}>
             <FeatureCard
               title="Manage Certificates"
               description="Issue, revoke, and renew digital certificates effortlessly."
