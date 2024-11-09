@@ -1,5 +1,5 @@
 body {
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100dvh;
@@ -7,12 +7,11 @@ body {
   flex-direction: column;
 }
 
-.form-container{
+.form {
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
 }
- 
+
 h2 {
   font-size: 3.5rem;
   text-align: center;
@@ -65,4 +64,14 @@ h2 {
 .logindiv a {
   color: #15569c;
   text-decoration: none;
+}
+
+/* Login.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack elements vertically */
+  height: 100vh;
+  background-color: #f4f4f9; /* Example background color */
 }

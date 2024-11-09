@@ -10,7 +10,7 @@ function HomePage() {
   return (
     <div style={{"position":"relative"}}>
       <Header />
-      <section className={styles ["hero"]}>
+      <section className={styles["hero"]}>
         <div className={styles["container"]}>
           <h2>
             Secure, Efficient, and Easy Management of Digital Certificates

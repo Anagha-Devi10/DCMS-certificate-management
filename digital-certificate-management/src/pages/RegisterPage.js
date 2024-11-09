@@ -1,8 +1,9 @@
 // src/pages/RegisterPage.js
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Form from '../components/Form';
+import RegisterForm from '../components/RegisterForm';
 
 function RegisterPage() {
   const [username, setUsername] = useState('');
@@ -33,6 +34,24 @@ function RegisterPage() {
         <label htmlFor="confirmPassword">Confirm Password:</label>
         <input type="password" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
       </Form>
+      <Footer />
+    </div>
+  );
+}
+
+export default RegisterPage;*/
+
+import React from 'react';
+import './register.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import RegisterForm from '../components/RegisterForm';
+
+function RegisterPage() {
+  return (
+    <div className='register-container'>
+      <Header />
+      <RegisterForm />
       <Footer />
     </div>
   );

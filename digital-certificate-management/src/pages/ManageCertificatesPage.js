@@ -1,9 +1,10 @@
 // src/pages/ManageCertificates.js
-import React from "react";
+import React, { useState } from 'react';
 // import './manage_certificates.css';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styles from "./manage_certificates.module.css";
+import CertificateForm from "../components/CertificateForm";
 
 function ManageCertificatesPage() {
   const certificates = [
@@ -16,6 +17,20 @@ function ManageCertificatesPage() {
     },
     // Add more certificates as needed
   ];
+
+  const [isEdittingCertificate, setIsEdittingCertificate] = useState(null); // Track certificate being edited
+
+  const handleEditSubmit = (editedCertificate) => {
+    // Send edited certificate data to backend for update
+    console.log('Edited certificate:', editedCertificate);
+    // Replace with logic to update certificate data on backend
+    // ... update certificates state if successful
+    setIsEdittingCertificate(null); // Exit edit mode
+  };
+
+  const handleEditClick = (certificateId) => {
+    setIsEdittingCertificate(certificateId); // Set id of certificate to edit
+  };
 
   return (
     <div>
@@ -42,9 +57,14 @@ function ManageCertificatesPage() {
                 <td>{certificate.expiry}</td>
                 <td>{certificate.status}</td>
                 <td>
-                  <button>Edit</button>
-
-                  <button className={styles["dlt"]}>Delete</button>
+                {isEdittingCertificate === certificate.id ? (
+                  // Render edit form if certificate is being edited
+                  <CertificateForm certificate={certificate} onSubmit={handleEditSubmit}/>
+                ) : (
+                  <button onClick={() => handleEditClick(certificate.id)}>
+                    Edit
+                  </button>
+                )}
                 </td>
               </tr>
             ))}
