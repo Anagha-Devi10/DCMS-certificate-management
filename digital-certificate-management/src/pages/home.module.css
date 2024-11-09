@@ -18,7 +18,7 @@
   margin: 0 auto;
 }
 .home-body {
-  height: 100vh;
+  max-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;

@@ -8,10 +8,12 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  position: fixed; /* Keeps footer at the bottom */
   bottom: 0;
-  position: absolute;
-} 
+  left: 0; /* Ensures footer is aligned across the entire width */
+}
 
 .footer p {
   margin: 0;
 }
+
