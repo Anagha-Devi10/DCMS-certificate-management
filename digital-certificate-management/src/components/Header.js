@@ -13,8 +13,7 @@ function Header() {
   }
   // Check if user is logged in
   const isAuthenticated = () => {
-    // return localStorage.getItem("user") !== null;
-    return true
+    return localStorage.getItem("user") !== null;
   };
 
   // Logout handler
