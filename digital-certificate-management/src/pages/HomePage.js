@@ -1,5 +1,3 @@
-// src/pages/HomePage.js
-import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FeatureCard from "../components/FeatureCard";
@@ -8,7 +6,7 @@ import styles from './home.module.css';
 
 function HomePage() {
   return (
-    <div style={{"position":"relative"}}>
+    <div className={styles["home-body"]}>
       <Header />
       <section className={styles["hero"]}>
         <div className={styles["container"]}>

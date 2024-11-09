@@ -42,14 +42,14 @@ function RegisterPage() {
 export default RegisterPage;*/
 
 import React from 'react';
-import './register.css';
+import styles from './register.module.css'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import RegisterForm from '../components/RegisterForm';
 
 function RegisterPage() {
   return (
-    <div className='register-container'>
+    <div className={styles['register-container']}>
       <Header />
       <RegisterForm />
       <Footer />

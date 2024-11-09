@@ -11,3 +11,33 @@
   background-color: rgb(240, 15, 15);
 }
 
+.h2 {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+.table th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+.table th {
+  background-color: var(--cta-bg);
+  color: white;
+}

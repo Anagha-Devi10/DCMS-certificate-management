@@ -38,41 +38,14 @@ import LogoutPage from './pages/LogoutPage';
 import ManageCertificatesPage from './pages/ManageCertificatesPage';
 
 function App() {
-  // Check if user is logged in
   const isAuthenticated = () => {
-    return localStorage.getItem('user') !== null;
+    return localStorage.getItem("user") !== null;
   };
 
-  // Logout handler
-  const handleLogout = () => {
-    localStorage.removeItem('user');
-    return <Navigate to="/login" />;
-  };
 
   return (
     <Router>
       <div className="app-container">
-        <nav className="navbar">
-          <div className="nav-logo">
-            <Link to="/">Certificate Management System</Link>
-          </div>
-          <div className="nav-links">
-            <Link to="/" className="nav-link">Home</Link>
-            {!isAuthenticated() ? (
-              <>
-                <Link to="/login" className="nav-link">Login</Link>
-                <Link to="/register" className="nav-link">Register</Link>
-              </>
-            ) : (
-              <>
-                <Link to="/dashboard" className="nav-link">Dashboard</Link>
-                <Link to="/manage-certificates" className="nav-link">Manage Certificates</Link>
-                <Link to="/logout" className="nav-link" onClick={handleLogout}>Logout</Link>
-              </>
-            )}
-          </div>
-        </nav>
-
         <main className="main-content">
           <Routes>
             <Route path="/" element={<HomePage />} />

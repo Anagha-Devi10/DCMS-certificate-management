@@ -13,7 +13,7 @@ function ManageCertificatesPage() {
       subject: "www.example.com",
       issuer: "Let's Encrypt",
       expiry: "2024-10-01",
-      status: "Active",
+      status: "Active", 
     },
     // Add more certificates as needed
   ];
@@ -36,8 +36,8 @@ function ManageCertificatesPage() {
     <div>
       <Header />
       <section>
-        <h2>Manage Certificates</h2>
-        <table>
+        <h2 className={styles["h2"]}>Manage Certificates</h2>
+        <table className={styles["table"]}>
           <thead>
             <tr>
               <th>Serial Number</th>

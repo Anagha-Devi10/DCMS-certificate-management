@@ -1,22 +1,22 @@
-body {
+/* body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100dvh;
   width: 100dvw;
   flex-direction: column;
-}
+} */
 
 .form {
   display: flex;
   flex-direction: column;
 }
 
-h2 {
+/* h2 {
   font-size: 3.5rem;
   text-align: center;
   color: black;
-}
+} */
 
 .logindiv {
   background-color: #fff;
@@ -66,12 +66,14 @@ h2 {
   text-decoration: none;
 }
 
-/* Login.css */
 .login-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* Stack elements vertically */
-  height: 100vh;
-  background-color: #f4f4f9; /* Example background color */
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column; 
+  /* height: 100vh; */
+  min-height: 100vh;
+  background-color: #f4f4f9;
 }
+
+

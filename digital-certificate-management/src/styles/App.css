@@ -1,4 +1,4 @@
-:root {
+ :root {
   --color1: #001f3f;
   --color2: #3a6d8c;
   --color3: #6a9ab0;
@@ -6,7 +6,12 @@
   --button-hover: #4fe3fa;
   --cta-bg: #007bff;
 }
+*{
+  margin: 0;
+  padding: 0;
+}
 
+/*
 #root {
   display: flex;
   flex-direction: column; 
@@ -187,4 +192,4 @@ footer {
 footer p {
   margin: 0;
 }
-
+ */

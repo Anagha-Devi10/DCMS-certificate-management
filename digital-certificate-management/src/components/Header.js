@@ -2,7 +2,7 @@
 import React from "react";
 // import './Components.css'; // Common component-specific styles
 import styles from "./header.module.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
 
 function Header() {
   const location = useLocation();
@@ -11,7 +11,13 @@ function Header() {
   if (location.pathname == "/") {
     isHome = true;
   }
+  // Check if user is logged in
+  const isAuthenticated = () => {
+    return localStorage.getItem("user") !== null;
+  };
 
+  // Logout handler
+  
   return (
     <header className={styles["header"]}>
       <div className={styles["container"]}>
@@ -21,13 +27,24 @@ function Header() {
           </Link>
         </div>
         <nav className={styles["nav"]}>
-          <Link to="/dashboard">Dashboard</Link>
-          <Link to="/manage-certificates">Manage Certificates</Link>
-          <Link to="/renewal-requests">Renewal Requests</Link>
-          <Link to="/reports">Reports</Link>
-          <Link to="/login" className="login-btn">
-            Login
-          </Link>
+          {isAuthenticated() ? (
+            <>
+              <Link to="/dashboard">Dashboard</Link>
+              <Link to="/manage-certificates">Manage Certificates</Link>
+              <Link to="/logout" className="login-btn">
+                Logout
+              </Link>
+            </>
+          ) : (
+            <> 
+              <Link to="/login" className="nav-link">
+                Login
+              </Link>
+              <Link to="/register" className="nav-link">
+                Register
+              </Link>
+            </>
+          )}
         </nav>
       </div>
       {isHome ? (

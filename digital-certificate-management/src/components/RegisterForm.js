@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import styles from './register-form.module.css'
 
 function RegisterForm() {
   const [userData, setUserData] = useState({
@@ -64,10 +65,11 @@ function RegisterForm() {
   };
 
   return (
-    <div className="register-form">
-      {error && <div className="error-message" style={{ color: 'red', marginBottom: '10px' }}>{error}</div>}
+    <div className={styles["register-form"]}>
+      {error && <div className={styles["error-message"]} style={{ color: 'red', marginBottom: '10px' }}>{error}</div>}
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
+      <h2 className={styles["h2"]}>REGISTER</h2>
+        <div className={styles["form-group"]}>
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -78,7 +80,7 @@ function RegisterForm() {
             required
           />
         </div>
-        <div className="form-group">
+        <div className={styles["form-group"]}>
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -89,7 +91,7 @@ function RegisterForm() {
             required
           />
         </div>
-        <div className="form-group">
+        <div className={styles["form-group"]}>
           <label htmlFor="confirmPassword">Confirm Password:</label>
           <input
             type="password"
@@ -101,7 +103,7 @@ function RegisterForm() {
           />
         </div>
         <button type="submit">Register</button>
-        <div className="login-link" style={{ marginTop: '10px' }}>
+        <div className={styles["login-link"]} style={{ marginTop: '10px' }}>
           Already have an account? <a href="/login">Login here</a>
         </div>
       </form>
