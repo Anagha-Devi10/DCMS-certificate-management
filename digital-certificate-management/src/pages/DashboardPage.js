@@ -8,9 +8,9 @@ import styles from '../components/certificate.module.css'
 
 function DashboardPage() {
   return (
-    <div>
+    <div> 
       <Header />
-      <h2 className="heading">Certificate Overview</h2>
+      <h2 className={styles["heading"]}>Certificate Overview</h2>
       <div className={styles["cards"]}>
         <CertificateCard title="Total Certificates" number="50" />
         <CertificateCard title="Expiring Soon" number="10" />

@@ -47,7 +47,7 @@ function Header() {
           )}
         </nav>
       </div>
-      {isHome ? (
+      {isHome && isAuthenticated()==false ?  (
         <h1 className={styles["welcome-text"]}>
           Welcome to the Digital Certificate Management System
         </h1>

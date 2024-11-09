@@ -18,7 +18,7 @@ function HomePage() {
             certificates in a secure and streamlined manner.
           </p>
         </div>
-      </section>
+      </section> 
       <section className={featuresStyles["features"]}>
         <div className={styles["container"]}>
           <h2>Key Features</h2>

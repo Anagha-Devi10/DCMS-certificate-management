@@ -17,9 +17,17 @@
   max-width: 800px;
   margin: 0 auto;
 }
-.home-body{
+.home-body {
   height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.container {
+  padding: 3rem;
+}
+
+.container p {
+  font-size: 1.5rem;
 }
