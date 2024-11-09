@@ -45,7 +45,8 @@ import ManageCertificatesPage from "./pages/ManageCertificatesPage";
 
 function App() {
   const isAuthenticated = () => {
-    return localStorage.getItem("user") !== null;
+    // return localStorage.getItem("user") !== null;
+    return true;
   };
 
   return (

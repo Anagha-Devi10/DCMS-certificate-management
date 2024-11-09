@@ -9,7 +9,7 @@ function Footer() {
       <p>
         © 2024 Digital Certificate Management System | Ensuring Security for
         Your Digital Assets
-      </p>
+      </p> 
     </footer>
   );
 }
