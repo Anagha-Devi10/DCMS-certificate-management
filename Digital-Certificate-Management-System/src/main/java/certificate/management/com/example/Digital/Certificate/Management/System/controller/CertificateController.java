@@ -2,6 +2,7 @@ package certificate.management.com.example.Digital.Certificate.Management.System
 
 import certificate.management.com.example.Digital.Certificate.Management.System.model.Certificate;
 import certificate.management.com.example.Digital.Certificate.Management.System.service.CertificateService;
+import certificate.management.com.example.Digital.Certificate.Management.System.dto.CertificateStatistics;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.Date;
@@ -31,7 +32,10 @@ public class CertificateController {
         return certificateService.saveCertificate(certificate);
     }
 
-
+    @GetMapping("/statistics")
+    public CertificateStatistics getStatistics() {
+        return certificateService.getStatistics();
+    }
     @DeleteMapping("/{id}")
     public void deleteCertificate(@PathVariable Long id) {
         certificateService.deleteCertificate(id);

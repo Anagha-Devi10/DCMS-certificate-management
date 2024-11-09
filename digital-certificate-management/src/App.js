@@ -1,32 +1,3 @@
-// src/App.js
-/*import React from 'react';
-import './styles/App.css';
-// import './components/Components.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import DashboardPage from './pages/DashboardPage';
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
-import LogoutPage from './pages/LogoutPage';
-import ManageCertificatesPage from './pages/ManageCertificatesPage';
-
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/logout" element={<LogoutPage />} />
-        <Route path="/manage-certificates" element={<ManageCertificatesPage />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;*/
-
 import React from "react";
 import "./styles/App.css";
 import {
@@ -55,12 +26,7 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route
-              path="/dashboard"
-              element={
-                isAuthenticated() ? <DashboardPage /> : <Navigate to="/login" />
-              }
-            />
+            <Route path="dashboard" element={<DashboardPage/>}/>
             <Route
               path="/login"
               element={
@@ -77,16 +43,7 @@ function App() {
                 )
               }
             />
-            <Route
-              path="/manage-certificates"
-              element={
-                isAuthenticated() ? (
-                  <ManageCertificatesPage />
-                ) : (
-                  <Navigate to="/login" />
-                )
-              }
-            />
+            <Route path="manage-certificates" element={<ManageCertificatesPage/>}/>
             <Route path="/logout" element={<LogoutPage />} />
           </Routes>
         </main>
